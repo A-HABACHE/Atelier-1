@@ -1,0 +1,67 @@
+Exercice 1:  Puissance “Ecrire une fonction qui renvoie la puissance d’un nombre Xn”
+ 
+r=int(input("veuillez saisir le nombre de r :"))
+x=int(input("veuillez saisir la puissance x : "))
+s=0
+for x in range (1,x+1):
+  s=r**x
+print('le resultat est : ',s)
+----------------------------------------------------------------------------------------
+Exercie 2 :Ecrire une fonction python qui calcul la factorielle d’un nombre donné”
+
+x=int(input("veuillez le nombre  x : "))
+s=1
+for i in range (1,x+1):
+  s=s*i
+print(s)
+-----------------------------------------------------------------------------------------
+Exercie 5:Ecrire une fonction en Python pour trouver la somme des séries 1! / 1 + 2! / 2 + 3! / 3 +
+4! / 4 + 5! / 5 en utilisant la fonction.”
+
+n=int(input("saisez le nombre de n : "))
+s=0
+for x in range (1,n+1):
+  s=s+x
+print(s)
+-------------------------------------------------------------------------------------------
+Exercice 7:
+
+texte="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+
+def frequenceLettre(lettre,texte):
+    compteur=0
+    for l in texte:
+        if l==lettre:
+            compteur=compteur+1
+    return compteur/len(texte)
+
+print(frequenceLettre("h",texte))
+-----------------------------------------------------------------------------------------------
+Exercice 6:Ecrire une fonction en Python pour compter les chiffres d'un nombre donné.”
+
+x=int(input("number  : "))
+def somme(n):
+    if n // 10 == 0:
+        return n
+    else:
+        return n % 10 + somme( n // 10 )
+    
+print( somme (x) )
+-------------------------------------------------------------------------------------------------
+ EXERCICE 3 :
+
+“**Ecrire une fonction en Python pour trouver la somme des séries 1! / 1 + 2! / 2 + 3! / 3 +
+4! / 4 + 5! / 5 en utilisant la fonction**.”
+
+def factorielle (x):
+  f=1
+  for i in range(1,x+1):
+    f=f*i
+  return f
+def somme():
+  k=0
+  for i in range (1,6):
+    k=k+(factorielle(i)/i)
+    print("%d!/%d"%(factorielle(i),i))
+  return k
+print("la somme c'est ",somme())
